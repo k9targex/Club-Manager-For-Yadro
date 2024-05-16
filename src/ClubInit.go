@@ -13,7 +13,6 @@ func main() {
 		os.Exit(1)
 	}
 	filepath := os.Args[1]
-	//filepath := "C:/YadroImpulse_2024/data/test2.txt"
 	clubInfo := models.ClubInfo{}
 	process.ProcessFile(filepath, &clubInfo)
 
@@ -22,7 +21,6 @@ func main() {
 	tablesProfit := make(map[int]models.TableStats)
 	for i := 1; i <= clubInfo.NumberOfTables; i++ {
 		tablesProfit[i] = models.TableStats{TotalProfit: 0, TotalMinutes: 0}
-		//tablesProfit[i]
 		tablesFree = append(tablesFree, i)
 	}
 	clubMap := models.ClubMap{
